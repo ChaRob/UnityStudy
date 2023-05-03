@@ -17,7 +17,7 @@
 
 # 3. 초기환경
 
-![Unity_start](Unity_start.png)
+![Unity_start](./StaticFiles/Unity_start.png)
 
 - hierarchy : 각종 object의 모임. 게임 화면에서 여러 객체들을 볼 수 있게 해준다.
     - 오른쪽 클릭 및 object에서 새로운 object 생성가능.
@@ -38,10 +38,10 @@
 - 화면 하단의 project와 console이 있다.
     - project : 프로젝트에 필요한 파일들이 있다.
     - console : 스크립트의 문제나 출력문을 보기 위한 곳
-![createfolderNfile](Unity_project_createfolderNfile.PNG)
+![createfolderNfile](./StaticFiles/Unity_project_createfolderNfile.PNG)
 
 - script를 vs code에서 진행하기 위해 Edit > Preferences 이후, 아래처럼 실행
-![externaltoolsetting](Unity_project_externaltoolsetting.PNG)
+![externaltoolsetting](./StaticFiles/Unity_project_externaltoolsetting.PNG)
 
 # 4. 간단한 게임 화면 만들어보기
 
@@ -50,7 +50,7 @@
 [오픈소스 이미지 사이트](https://opengameart.org/)
 
 - 배경 만들기
-![createbackground](Unity_project_createbackground.PNG)
+![createbackground](./StaticFiles/Unity_project_createbackground.PNG)
 
 ※ 팁 : project settings에서 editor > enter play mode options를 선택하면 플레이 눌렀을 시 좀 더 빠르게 실행 가능.
 
@@ -58,9 +58,9 @@
 
 - 위로 움직이는 배경을 만든다? => 배경이미지를 2개를 만들고 컨베이어 벨트처럼 하나가 움직인 후, 일정 위치에 도달하면 다시 위로 보내어 아래로 내려보낸다.
 - 아래처럼 script를 배경을 선택후 inspector에 넣어주면 component로 들어가서 해당 script에 영향을 받게 된다.
-![background_scriptadd](Unity_project_background_scriptadd.PNG)
+![background_scriptadd](./StaticFiles/Unity_project_background_scriptadd.PNG)
 - 초기에 보여지는 스크립트 파일 내용.
-![background_scriptfile](Unity_project_background_scriptfile.PNG)
+![background_scriptfile](./StaticFiles/Unity_project_background_scriptfile.PNG)
 
 ```C#
 public class Background : MonoBehaviour
