@@ -354,3 +354,53 @@ private void OnTriggerEnter2D(Collider2D other) {
     ...
 }
 ```
+
+- 이제 게임오버시 나타날 패널을 정의해주면 된다.
+
+![gameoverpanel_create](./StaticFiles/Unity_project_gameoverpanel_create.PNG)
+
+```c#
+...
+// SceneManagement를 불러와서 해당 씬을 재사용할 수 있게 한다.
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    ...
+
+    // 게임오버시 패널설정
+    [SerializeField]
+    private GameObject gameOverPanel;
+
+    // 재시작버튼 오브젝트
+    [SerializeField]
+    private GameObject gameAgainButton;
+
+    ...
+
+    public void SetGameOver() {
+        isGameOver = true;
+        
+        EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
+        if(enemySpawner != null) {
+            enemySpawner.StopEnemyRoutine();
+        }
+        // 특정 메서드를 일정 시간이 지난 뒤에 호출한다.
+        Invoke("ShowGameOverPanel", 1f);
+    }
+
+    void ShowGameOverPanel() {
+        // 비활성화중인 패널을 활성화시킨다.
+        gameOverPanel.SetActive(true);
+    }
+
+    public void PlayAgain() {
+        // import한 SceneManager에서 Scene을 불러온다.
+        SceneManager.LoadScene("SampleScene");
+    }
+}
+```
+
+![gameoverpanel_button](./StaticFiles/Unity_project_gameoverpanel_button.PNG)
+
+- button의 onclick()을 게임매니저 오브젝트의 메서드인 playAgain를 넣어주면 해당 버튼을 누를 때 메서드가 호출된다.
