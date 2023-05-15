@@ -38,6 +38,7 @@
 - 화면 하단의 project와 console이 있다.
     - project : 프로젝트에 필요한 파일들이 있다.
     - console : 스크립트의 문제나 출력문을 보기 위한 곳
+
 ![createfolderNfile](./StaticFiles/Unity_project_createfolderNfile.PNG)
 
 - script를 vs code에서 진행하기 위해 Edit > Preferences 이후, 아래처럼 실행
